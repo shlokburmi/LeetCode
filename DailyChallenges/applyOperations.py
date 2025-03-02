@@ -1,4 +1,4 @@
-#Problem-2460
+#Problem-2460  Apply Operations to an Array
 def applyOperations(self, nums):
         ans=[0]*len(nums)
         for i in range(len(nums)-1):
