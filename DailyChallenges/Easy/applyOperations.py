@@ -11,3 +11,4 @@ def applyOperations(self, nums):
                 ans[j]=num
                 j+=1
         return ans
+
