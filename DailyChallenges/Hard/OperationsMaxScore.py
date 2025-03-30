@@ -2,7 +2,7 @@
 
 MOD = 1_000_000_007  # Class-level constant
 
-    def maximumScore(self, nums: list[int], k: int) -> int:
+def maximumScore(self, nums: list[int], k: int) -> int:
         n = len(nums)
         ans = 1
         minPrimeFactors = self._sieveEratosthenes(max(nums) + 1)
@@ -44,7 +44,7 @@ MOD = 1_000_000_007  # Class-level constant
 
         return ans
 
-    def _sieveEratosthenes(self, n: int) -> list[int]:
+def _sieveEratosthenes(self, n: int) -> list[int]:
         """Gets the minimum prime factor of i, where 2 <= i <= n."""
         minPrimeFactors = [i for i in range(n + 1)]
         for i in range(2, int(n**0.5) + 1):
@@ -53,7 +53,7 @@ MOD = 1_000_000_007  # Class-level constant
                     minPrimeFactors[j] = min(minPrimeFactors[j], i)
         return minPrimeFactors
 
-    def _getPrimeScore(self, num: int, minPrimeFactors: list[int]) -> int:
+def _getPrimeScore(self, num: int, minPrimeFactors: list[int]) -> int:
         primeFactors = set()
         while num > 1:
             divisor = minPrimeFactors[num]
